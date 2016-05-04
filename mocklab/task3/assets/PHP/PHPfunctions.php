@@ -53,7 +53,7 @@ function addbugsdetails(){
     $bugSummary = $_POST["bugsummary"];
     $bugCategory = $_POST["bugcategory"];
 
-    $sql = "INSERT INTO `bugs` (`bugName`, `bugCategory`, `bugSummary`) VALUES ('$bugName', '$bugSummary', '$bugCategory')";
+    $sql = "INSERT INTO `bugs` (`bugName`, `bugSummary`, `bugCategory`) VALUES ('$bugName', '$bugSummary', '$bugCategory')";
 
     $db = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
