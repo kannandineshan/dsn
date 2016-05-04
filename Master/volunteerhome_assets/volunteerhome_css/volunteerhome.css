@@ -1,0 +1,283 @@
+header{
+    max-width: 600px;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+h2{
+    color: darkred;
+    border: 2px solid black;
+    max-width: 300px;
+    border-radius: 25px;
+    box-shadow: 0 9px #999;
+}
+
+#welcomepage{
+    max-width: 600px;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aliceblue;
+    position: absolute;
+    border: 2px solid yellowgreen;
+
+}
+
+.form{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cont1 {
+    max-width: 600px;
+    background: yellowgreen;
+    border: 2px solid yellowgreen;
+    border-radius: 30px;
+    box-shadow: 0 9px #999;
+}
+
+#cont2 {
+    max-width: 600px;
+    background-color: palevioletred;
+    border: 2px solid yellowgreen;
+    border-radius: 30px;
+    box-shadow: 0 9px #999;
+}
+
+#cont3 {
+    max-width: 600px;
+    background-color: lightsalmon;
+    border: 2px solid yellowgreen;
+    border-radius: 30px;
+    box-shadow: 0 9px #999;
+}
+
+#cont4 {
+    max-width: 600px;
+    background-color: yellow;
+    border: 2px solid yellowgreen;
+    border-radius: 30px;
+    box-shadow: 0 9px #999;
+}
+
+#cont5 {
+    max-width: 600px;
+    background-color: lightskyblue;
+    border: 2px solid yellowgreen;
+    border-radius: 30px;
+    box-shadow: 0 9px #999;
+}
+
+#cont6 {
+    max-width: 600px;
+    background-color: palevioletred;
+    border: 2px solid yellowgreen;
+    border-radius: 30px;
+    box-shadow: 0 9px #999;
+}
+
+#surveysummaryandsubmission {
+    max-width: 1450px;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aliceblue;
+    border: 2px solid yellowgreen;
+    border-radius: 30px;
+    box-shadow: 0 9px #999;
+}
+
+p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#surveyeventdatesummary{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#surveyquestionssummary{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.surveynavbuttons{
+    max-width: 300px;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ==========================================================Survey progress Bar */
+.ui-progressbar {
+    position: relative;
+    max-width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.progress-label {
+    position: absolute;
+    left: 10%;
+    top: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+/* ==========================================================Survey Buttons */
+input[type=button] {
+
+
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: white;
+    border: 2px solid yellowgreen;
+    border-radius: 30px;
+    box-shadow: 0 9px #999;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+#start:hover {
+    background-color: yellowgreen;
+
+}
+
+#start:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+#home{
+    background: url(../volunteerhome_images/homeorange.png);
+    background-size: 100% 100%;
+}
+
+#home:hover {
+    background-color: yellowgreen;
+    color: white;
+}
+
+#home:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+#logout{
+    background: url(../volunteerhome_images/logout.png);
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+
+#logout:hover {
+    background-color: yellowgreen;
+
+}
+
+#logout:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.navbuttonnext{
+    background: url(../volunteerhome_images/arrownext.png);
+    background-size: 100% 100%;
+}
+
+.navbuttonnext:hover {
+    background-color: yellowgreen;
+
+}
+
+.navbuttonnext:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.navbuttonprevious{
+    background: url(../volunteerhome_images/arrowprevious.png);
+    background-size: 100% 100%;
+}
+
+.navbuttonprevious:hover {
+    background-color: yellowgreen;
+
+}
+
+.navbuttonprevious:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+#submit{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: white;
+    border: 2px solid yellowgreen;
+    border-radius: 30px;
+    box-shadow: 0 9px #999;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+#submit:hover {
+    background-color: yellowgreen;
+}
+
+#submit:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.container{
+    /*margin-left:20%;
+    margin-right:20%;*/
+    padding:10% 20% 5% 40%;
+    width: 800px;
+    margin: 0 auto;
+}
+
+a{
+   text-decoration-line: none;
+}
+
+.general{
+    float:left;
+    background-color:#1284C1;
+    padding:40px 50px 40px 50px;
+    margin:10px 50px 10px 300px;
+    align-content:center;
+    color: #ffffff;
+    border-radius:10px;
+}
+
+.specific{
+    background-color:blanchedalmond;
+    padding:40px 50px 40px 50px;
+    margin:10px 10px 10px 10px;
+    align-content:center;
+    color:darkred;
+    border-radius:10px;
+
+}
+
+table{
+    border-collapse:collapse;
+    border-color:transparent;
+}
