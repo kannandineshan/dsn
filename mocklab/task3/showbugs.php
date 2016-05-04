@@ -65,8 +65,73 @@ include("assets/PHP/PHPfunctions.php");
                 if ($success == "Yes") {
                     echo "<SCRIPT>alert('New Bug Has Been Added To The Database!!!');</SCRIPT>";
 
+                    $result = getbugsdetails();
+
+                    if (mysqli_num_rows($result) > 0) {
+
+                        $counter = 0;
+
+                        while ($row = mysqli_fetch_array($result)) {
+
+                            $counter++;
+                            ?>
+                            <section class="content">
+
+                                <section class="title"> Bug Number:</section><?php echo $counter; ?>
+
+
+                                <section class="title"> Bug Name:</section> <?php echo $row['bugName']; ?>
+
+
+                                <section class="title"> Bug Category:</section><?php echo $row['bugCategory']; ?>
+
+
+                                <section class="title"> Bug Summary:</section> <?php echo $row['bugSummary']; ?>
+
+                            </section>
+                            <br>
+
+                            <?php
+
+                        }//end of for loop
+                    }//end if statement
+
+
+
                 } elseif ($success == "No") {
                     echo "<script>alert('Bug With This Name Already Exists In The Database');</script>";
+
+                    $result = getbugsdetails();
+
+                    if (mysqli_num_rows($result) > 0) {
+
+                        $counter = 0;
+
+                        while ($row = mysqli_fetch_array($result)) {
+
+                            $counter++;
+                            ?>
+                            <section class="content">
+
+                                <section class="title"> Bug Number:</section><?php echo $counter; ?>
+
+
+                                <section class="title"> Bug Name:</section> <?php echo $row['bugName']; ?>
+
+
+                                <section class="title"> Bug Category:</section><?php echo $row['bugCategory']; ?>
+
+
+                                <section class="title"> Bug Summary:</section> <?php echo $row['bugSummary']; ?>
+
+                            </section>
+                            <br>
+
+                            <?php
+
+                        }//end of for loop
+                    }//end if statement
+
 
                 } elseif ($success == null) {
                     $result = getbugsdetails();
