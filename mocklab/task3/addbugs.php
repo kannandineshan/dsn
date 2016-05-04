@@ -62,15 +62,6 @@ include("assets/PHP/PHPfunctions.php");
             <?php
                 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
-                    $success = $_GET["Success"];
-
-                    if ($success == "Yes") {
-                        echo "<SCRIPT>alert('New Bug Has Been Added To The Database!!!');</SCRIPT>";
-
-                    } elseif ($success == "No") {
-                        echo "<script>alert('Bug With This Name Already Exists In The Database');</script>";
-
-                    } elseif ($success == null) {
                         ?>
                         <section class="content">
 
@@ -103,7 +94,7 @@ include("assets/PHP/PHPfunctions.php");
 
                     } else {
                         header("Location: index.php");
-                    }
+
                 }
             ?>
 

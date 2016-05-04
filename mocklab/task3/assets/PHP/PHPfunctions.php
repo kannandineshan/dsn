@@ -78,7 +78,7 @@ function addbugsdetails(){
 
         //if $return is no longer NULL, then it means user exists already
         if (isset($return)) {
-            header("Location: addbugs.php?Success=No");
+            header("Location: showbugs.php?Success=No");
         } else {
 
 
@@ -92,7 +92,7 @@ function addbugsdetails(){
 
             $result = mysqli_query($db, $sql) or die("Error: " . $sql . "<br>" . $db->error);
 
-            header("Location: addbugs.php?Success=Yes");
+            header("Location: showbugs.php?Success=Yes");
 
         }
     }

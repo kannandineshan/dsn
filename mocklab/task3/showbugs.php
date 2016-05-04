@@ -60,16 +60,25 @@ include("assets/PHP/PHPfunctions.php");
 
                 <?php
 
+                $success = $_GET["Success"];
+
+                if ($success == "Yes") {
+                    echo "<SCRIPT>alert('New Bug Has Been Added To The Database!!!');</SCRIPT>";
+
+                } elseif ($success == "No") {
+                    echo "<script>alert('Bug With This Name Already Exists In The Database');</script>";
+
+                } elseif ($success == null) {
                     $result = getbugsdetails();
 
-                    if(mysqli_num_rows($result)>0){
+                    if (mysqli_num_rows($result) > 0) {
 
                         $counter = 0;
 
-                        while ($row=  mysqli_fetch_array($result)) {
+                        while ($row = mysqli_fetch_array($result)) {
 
                             $counter++;
-                ?>
+                            ?>
                             <section class="content">
 
                                 <section class="title"> Bug Number:</section><?php echo $counter; ?>
@@ -86,10 +95,11 @@ include("assets/PHP/PHPfunctions.php");
                             </section>
                             <br>
 
-                <?php
+                            <?php
 
                         }//end of for loop
                     }//end if statement
+                }
                 ?>
 
         </section>
