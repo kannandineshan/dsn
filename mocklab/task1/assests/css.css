@@ -1,0 +1,60 @@
+body{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    padding: 10px 10px 10px 10px;
+}
+
+#logo{
+    max-width: 150px;
+}
+
+.container{
+    border: dotted;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+}
+
+.container-content{
+    border: dotted;
+}
+
+.container-nav{
+    height: 500px;
+    border: dotted;
+    font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: inline-block;
+    text-align: center;
+    padding: 0 10px 10px 10px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.category{
+    font-style: italic;
+}
+
+p{
+    padding: 0 10px 10px 10px;
+}
