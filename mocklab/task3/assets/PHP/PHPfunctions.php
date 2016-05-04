@@ -92,6 +92,8 @@ function addbugsdetails(){
 
             $result = mysqli_query($db, $sql) or die("Error: " . $sql . "<br>" . $db->error);
 
+            $db->close();
+
             header("Location: showbugs.php?Success=Yes");
 
         }
