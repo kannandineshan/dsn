@@ -75,9 +75,9 @@ include("assets/PHP/PHPfunctions.php");
                             <label for="bugcategory">Bug Category</label>
                             <select name="bugcategory">
                                 <optionvalue="">Select  location</option>
-                                <option value="android">New  York</option>
-                                <option value="ios">Vancouver</option>
-                                <option value="windows">Atlantis</option>
+                                <option value="Android">Android</option>
+                                <option value="iOS">iOS</option>
+                                <option value="Windows">Windows</option>
                             </select>
                             <br>
                             <br>
