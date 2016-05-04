@@ -49,18 +49,46 @@ function getbugsdetails(){
 
 function addbugsdetails(){
 
-    $bugName = $_POST["bugname"];
-    $bugSummary = $_POST["bugsummary"];
-    $bugCategory = $_POST["bugcategory"];
+    //read input details from addbugs.php
+    $bugName = $_POST['bugname'];
 
-    $sql = "INSERT INTO `bugs` (`bugName`, `bugSummary`, `bugCategory`) VALUES ('$bugName', '$bugSummary', '$bugCategory')";
+
+
+    //create select statement to using firstname and surname as filters
+    $query="SELECT `bugName` FROM `bugs` WHERE `bugName` ='$bugName' LIMIT 1";
 
     $db = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
-    $result = mysqli_query($db,$sql) or die("Error: ".$sql."<br>".$db->error);
+    //check to see that sql query executes properly, and return any errors
+    $output=$db->query($query) or die("Error: ".$query."<br>".$db->error);
 
-    echo "<SCRIPT>alert('New Bug Has Been Added To The Database!!!');</SCRIPT>";
+    $return=NULL;
 
-    header("Location: showbugs.php");
+    //go through the array of results returned from the query if any
+    while($row = $output->fetch_assoc()) {
+        $return=$row["bugName"];//add the email value to the return variable
+    }
 
+
+    //if $return is no longer NULL, then it means user exists already
+    if(isset($return)){
+        header("Location: addbugs.php?Success=No");
+    }
+
+    else {
+
+
+        $bugName = $_POST["bugname"];
+        $bugSummary = $_POST["bugsummary"];
+        $bugCategory = $_POST["bugcategory"];
+
+        $sql = "INSERT INTO `bugs` (`bugName`, `bugSummary`, `bugCategory`) VALUES ('$bugName', '$bugSummary', '$bugCategory')";
+
+        $db = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+
+        $result = mysqli_query($db, $sql) or die("Error: " . $sql . "<br>" . $db->error);
+
+        header("Location: addbugs.php?Success=Yes");
+
+    }
 }

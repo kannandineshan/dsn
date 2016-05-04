@@ -61,39 +61,50 @@ include("assets/PHP/PHPfunctions.php");
         <section class="container-content">
             <?php
                 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-            ?>
-                    <section class="content">
 
-                        <form action="" method="post">
+                    $success = $_GET["Success"];
 
-                            <label for="bugname">Bug Name</label>
-                            <input required type="text" id="bugname" name="bugname">
-                            <br>
-                            <label for="bugsummary">Bug Summary</label>
-                            <textarea required id="bugsummary" name="bugsummary"></textarea>
-                            <br>
-                            <label for="bugcategory">Bug Category</label>
-                            <select name="bugcategory">
-                                <optionvalue="">Select  location</option>
-                                <option value="Android">Android</option>
-                                <option value="iOS">iOS</option>
-                                <option value="Windows">Windows</option>
-                            </select>
-                            <br>
-                            <br>
-                            <input type="submit" value="Submit" id="submit">
+                    if ($success == "Yes") {
+                        echo "<SCRIPT>alert('New Bug Has Been Added To The Database!!!');</SCRIPT>";
 
-                        </form>
+                    } elseif ($success == "No") {
+                        echo "<script>alert('Bug With This Name Already Exists In The Database');</script>";
 
-                    </section>
-            <?php
-                }elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    addbugsdetails();
+                    } elseif ($success == null) {
+                        ?>
+                        <section class="content">
 
-                }else{
-                    header("Location: index.php");
+                            <form action="" method="post">
+
+                                <label for="bugname">Bug Name</label>
+                                <input required type="text" id="bugname" name="bugname">
+                                <br>
+                                <label for="bugsummary">Bug Summary</label>
+                                <textarea required id="bugsummary" name="bugsummary"></textarea>
+                                <br>
+                                <label for="bugcategory">Bug Category</label>
+                                <select name="bugcategory">
+                                    <optionvalue
+                                    ="">Select location</option>
+                                    <option value="Android">Android</option>
+                                    <option value="iOS">iOS</option>
+                                    <option value="Windows">Windows</option>
+                                </select>
+                                <br>
+                                <br>
+                                <input type="submit" value="Submit" id="submit">
+
+                            </form>
+
+                        </section>
+                        <?php
+                    } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        addbugsdetails();
+
+                    } else {
+                        header("Location: index.php");
+                    }
                 }
-
             ?>
 
 
