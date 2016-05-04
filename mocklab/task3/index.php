@@ -17,6 +17,7 @@ include("assets/PHP/PHPfunctions.php");
 
         <!-- - CSS Stylesheet- -->
         <link rel="stylesheet" href="assets/CSS/css.css" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 
     </head>
     <!-- - [END OF HEAD] =========================================================================================== -->
