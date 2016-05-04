@@ -73,7 +73,12 @@ include("assets/PHP/PHPfunctions.php");
                             <textarea required id="bugsummary" name="bugsummary"></textarea>
                             <br>
                             <label for="bugcategory">Bug Category</label>
-                            <input required type="text" id="bugcategory" name="bugcategory">
+                            <select name="bugcategory">
+                                <optionvalue="">Select  location</option>
+                                <option value="android">New  York</option>
+                                <option value="ios">Vancouver</option>
+                                <option value="windows">Atlantis</option>
+                            </select>
                             <br>
                             <br>
                             <input type="submit" value="Submit" id="submit">
